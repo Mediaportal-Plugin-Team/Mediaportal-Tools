@@ -44,7 +44,7 @@ jobs:
           fetch-depth: 0
 
       - name: Nuget
-        if: "${{ nuget-restore || false }}"
+        if: "${{ inputs.nuget-restore || false }}"
         run: |
           nuget restore
         working-directory: ${{ github.workspace }}\${{ inputs.nuget-path || '' }}
